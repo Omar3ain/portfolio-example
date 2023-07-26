@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omar Medhat | Portfolio</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/lib.css">
+    <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script src="./assets/javascript/index.js" defer></script>
+</head>
+
+<body>
+    <nav class="flex justify-content-space-between align-items-center p-1 flex-direction-row navbar ">
+        <div class="logo">
+           <h1>Omar<span>.</span></h1>
+        </div>
+        <ul class="menu flex flex-direction-row justify-content-space-between align-items-center">
+           <li><a href="#">Home</a></li>
+           <li><a href="#about-me">About me</a></li>
+           <li><a href="#portfolio">Projects</a></li>
+           <li><a href="#contact">Contact me</a></li>
+        </ul>
+   </nav>
+
+    <section id="intro" class="introduction container">
+        <div class="image-box">
+            <img class="main-image" src="./assets/images/0c2adf5d-26e7-4621-961f-2b297102fd5d.jpeg" alt="">
+        </div>
+
+        <div class="header-content container">
+            <h1 class="header-title">
+                <span class="up">Hello!</span>
+                <span class="down"> my name is omar Medhat</span>
+            </h1>
+            <p class="header-subtitle">Software Engineer</p>
+            <a href="https://github.com/omar3ain" class="view-work-button" target="_blank">Visit my work!</a>
+        </div>
+    </section>
+
+    <section id="about-me" class="white-bg">
+        <p class="section-subtitle">Who Am I ?</p>
+        <h2 class="section-title">About Me</h2>
+        <p>Hello, my name is Omar Medhat, a software developer with a passion for software engineering and a love for continuous learning. I started my career as an architect but realized my true passion was in software development. I have since transitioned into the tech industry and have been dedicated to mastering this craft ever since.<br/>
+            When I'm not coding, you can find me reading about new technologies, attending tech conferences or meetups, or spending quality time with my family and friends. I believe that continuous learning is the key to success and I am always looking for ways to expand my horizons.
+        </p>
+        <button class="view-work-button" onclick="downloadCV()">Download CV</button>
+    </section>
+
+    <section id="portfolio" class="portfolio container p-2">
+        <p class="section-subtitle">What I Did ?</p>
+        <h2 class="section-title">Portfolio</h2>
+        <div class="cards-container">
+
+            <div class="card">
+                <img class="card-image" src="./assets//images/screenshot1.jpeg"/>
+                <div class="card__content">
+                    <p class="card__title">Notepad app using java</p>
+                    <p class="card__description">Notepad application clone using java anda javaFX.</p>
+                    <a class="button" href="https://github.com/Omar3ain/NotePad_app_using_java" target="_blank">See the project</a>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-image" src="./assets//images/Screenshot 2.png"/>
+                <div class="card__content">
+                    <p class="card__title">Book Valley</p>
+                    <p class="card__description">Book store application user can explore different books and different categories and add it to favorites and review books.(Nodejs-express.js-angular-mongodb)</p>
+                    <a class="button" href="https://github.com/Omar3ain/frontend-MeanStack-project-" target="_blank">See the project</a>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-image" src="./assets//images/Screenshot 3.png"/>
+                <div class="card__content">
+                    <p class="card__title">Sellio e-commerce app</p>
+                    <p class="card__description">E-commerce user can explore different products and categories with admin dashboard (Django - react - postgresSql- redux toolkit)</p>
+                    <a class="button" href="https://github.com/Omar3ain/E-commerce-frontend-react-app" target="_blank">See the project</a>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <section id="contact" class="white-bg">
+        <p class="section-subtitle">Want to contact me ?</p>
+        <h2 class="section-title">Send me a message</h2>
+        <form id="contact-form" action="#" method="post">
+            <label for="name">Name</label>
+            <input type="email" id="name" name="name" required>
+
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <input type="submit" value="Submit" onclick="sendFormData(event)">
+        </form>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Omar Medhat &copy;. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
