@@ -1,5 +1,7 @@
+let menu = document.querySelector('.menu');
+let menuToggle = document.querySelectorAll('.menu-toggle');
+
 (function() {
-    // https://dashboard.emailjs.com/admin/account
     emailjs.init('XeLWa51puwdr_IQ6o');
 })();
 
@@ -31,3 +33,23 @@ function downloadCV() {
     link.click();
     document.body.removeChild(link);
 }
+
+function toggleCloseIcon() {
+    let closeIcon = document.querySelector('.close');
+    let openIcon = document.querySelector('.open');
+    if (menu.classList.contains('responsive-menu')) {
+      closeIcon.style.display = 'inline-block';
+      openIcon.style.display = 'none'
+    } else {
+      closeIcon.style.display = 'none';
+      openIcon.style.display = 'inline-block';
+    }
+  }
+
+  menuToggle.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+
+      menu.classList.toggle('responsive-menu');
+      toggleCloseIcon()
+    });
+  });

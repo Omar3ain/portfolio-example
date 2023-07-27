@@ -59,6 +59,8 @@ body {
 
 .menu {
     list-style: none;
+    display: none;
+
 }
 
 .menu li {
@@ -74,7 +76,40 @@ body {
 .menu li a:hover {
     color: var(--darker-primary-color);
 }
+.menu.responsive-menu {
+    display: block;
+    position: absolute;
+    top: 2.5em;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--primary-color);
+    z-index: 1;
+    transition: all 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
 
+ .menu.responsive-menu li {
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+ }
+
+ .menu-toggle {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 2rem;
+ }
+
+ .close {
+    display: none;
+  }
+
+.menu.responsive-menu .close {
+    display: inline-block;
+}
 .image-box {
     width: 80vw;
     margin: 2em auto;
@@ -138,6 +173,7 @@ body {
     --hover-bg: var(--primary-color);
     --hover-text: var(--darker-primary-color);
     max-width: 85vw;
+    min-height: 45vh;
     text-align: center;
     background: var(--bg);
     padding: 1.5em;
@@ -238,7 +274,7 @@ body {
 
 .card {
     position: relative;
-    width: 300px;
+    width: 80vw;
     height: 200px;
     background-color: #f2f2f2;
     border-radius: 10px;
@@ -376,7 +412,15 @@ footer {
         font-size: 1rem;
         justify-content: space-around !important;
     }
-
+    .menu{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+   .menu-toggle {
+        display: none !important;
+    }
     #intro {
         display: flex;
         justify-content: space-between;
