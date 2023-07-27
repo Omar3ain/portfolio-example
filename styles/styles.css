@@ -26,9 +26,11 @@ body {
 *::after {
     box-sizing: border-box;
 }
-p{
+
+p {
     font-size: 1rem;
 }
+
 body {
     background-color: var(--secondary-color);
 
@@ -84,10 +86,12 @@ body {
     width: 100%;
     height: 100%;
 }
-.introduction{
+
+.introduction {
     margin-bottom: 2em;
 }
-.header-content{
+
+.header-content {
     margin-top: 20px;
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
@@ -95,6 +99,7 @@ body {
     flex-grow: 1;
     max-width: 550px;
 }
+
 .header-title {
     font-size: 2.4rem;
     font-weight: bold;
@@ -103,7 +108,8 @@ body {
     margin-bottom: 0.5em;
     line-height: 1em;
 }
-.up{
+
+.up {
     font-size: 2rem;
     font-weight: 500;
     color: #c5c5c5;
@@ -111,22 +117,91 @@ body {
     position: relative;
     display: block;
 }
-.down{
+
+.down {
     font-size: 2.5rem;
     margin-bottom: 0;
     position: relative;
     display: block;
 }
 
-.header-subtitle{
+.header-subtitle {
     font-size: 0.8rem;
     letter-spacing: 1rem;
     color: var(--primary-color);
     opacity: .8;
-    /* margin-top: -10px; */
     margin-bottom: 3em;
 }
-.view-work-button{
+
+#about-me .card {
+    --bg: #a8a8a8;
+    --hover-bg: var(--primary-color);
+    --hover-text: var(--darker-primary-color);
+    max-width: 85vw;
+    text-align: center;
+    background: var(--bg);
+    padding: 1.5em;
+    padding-block: 1.8em;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    transition: .3s cubic-bezier(.6, .4, 0, 1), transform .15s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+#about-me .card .icon{
+    font-size: 3rem;
+}
+
+#about-me .card__body {
+    color: #464853;
+    line-height: 1.5em;
+    font-size: 1em;
+}
+
+#about-me .card> :not(span) {
+    transition: .3s cubic-bezier(.6, .4, 0, 1);
+}
+
+#about-me .card>strong {
+    display: block;
+    font-size: 1.4rem;
+    letter-spacing: -.035em;
+}
+
+#about-me .card span {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--hover-text);
+    border-radius: 5px;
+    font-weight: bold;
+    top: 100%;
+    transition: all .3s cubic-bezier(.6, .4, 0, 1);
+}
+
+#about-me .card:hover span {
+    top: 0;
+    font-size: 1.2em;
+}
+
+#about-me .card:hover {
+    background: var(--hover-bg);
+}
+
+#about-me .card:hover>div,
+.card:hover>strong {
+    opacity: 0;
+}
+
+.view-work-button {
     border-radius: 2.5em;
     padding: 1.5em;
     border: none;
@@ -137,21 +212,25 @@ body {
     font-family: 'Oswald', sans-serif;
     cursor: pointer;
     text-decoration: none;
-    transition:  background 0.5s;
+    transition: background 0.5s;
 }
-.view-work-button:hover{
+
+.view-work-button:hover {
     background: var(--primary-color);
     transition: 0.5s;
 }
-.white-bg{
+
+.white-bg {
     background-color: rgb(255, 255, 255);
     padding: 3em;
 }
+
 .section-subtitle {
     margin-bottom: 6px;
     font-weight: 400;
     opacity: .6;
 }
+
 .section-title {
     font-size: 1.5rem;
     color: var(--darker-primary-color);
@@ -171,10 +250,12 @@ body {
     box-shadow: 0 0 0 5px #ffffff80;
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     margin: 2em auto;
-  }
-.card .card-image{
+}
+
+.card .card-image {
     width: 100%;
 }
+
 .card svg {
     width: 48px;
     fill: var(--secondary-color);
@@ -222,9 +303,10 @@ body {
     line-height: 1.4;
 }
 
-.portfolio .section-subtitle{
+.portfolio .section-subtitle {
     color: var(--white-color);
 }
+
 .card .button {
     border-radius: 0.5em;
     padding: 0.5em;
@@ -279,40 +361,49 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: var(--darker-primary-color);
 }
-footer{
+
+footer {
     color: var(--white-color);
     text-align: center;
 }
-@media(min-width: 768px){
-   :root{
+
+@media(min-width: 768px) {
+    :root {
         font-size: 20px;
     }
-    nav{
+
+    nav {
         font-size: 1rem;
         justify-content: space-around !important;
     }
+
     #intro {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-    .header-subtitle{
+
+    .header-subtitle {
         margin-bottom: 2em;
     }
-    .image-box{
+
+    .image-box {
         width: 20vw;
     }
+
     .view-work-button {
         border-radius: 0.5em;
         padding: 0.5em;
         font-weight: 300;
     }
-    .cards-container{
+
+    .cards-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-    .card{
+
+    .card {
         width: 25vw;
         height: 50vh;
     }
